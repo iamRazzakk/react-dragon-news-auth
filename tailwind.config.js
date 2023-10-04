@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: [
+  content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        displayFont: "'Poppins', sans-serif", // Adds a new `font-display` class
+      }
+    }
   },
   plugins: [require("daisyui")],
 }

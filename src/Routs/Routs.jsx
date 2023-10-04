@@ -1,8 +1,12 @@
-const { createBrowserRouter } = require("react-router-dom");
-const { default: Layout } = require("../components/Layout/Layout");
-const { default: Home } = require("../Pages/Home/Home");
+// const { createBrowserRouter } = require("react-router-dom");
+import { createBrowserRouter } from "react-router-dom";
+// import form {createBrowserRouter} "react-router-dom"
+// const { default: Layout } = require("../components/Layout/Layout");
+// const { default: Home } = require("../Pages/Home/Home");
+import Layout from "../components/Layout/Layout";
+import Home from "../Pages/Home/Home";
 
-const routes = createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout></Layout>,
@@ -14,4 +18,4 @@ const routes = createBrowserRouter([
         ]
     }
 ])
-export default routes
+export default router
