@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
     const { singIn } = useContext(AuthContext)
+    const location = useLocation()
+    const Navigate = useNavigate()
+    console.log(location, "Location i private path");
     const handleLogin = e => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -13,6 +16,7 @@ const Login = () => {
         singIn(email, password)
             .then(result => {
                 console.log(result);
+                Navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error);

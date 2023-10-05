@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
+
 const NewsCard = ({ news }) => {
-    const { title, image_url, details,_id } = news;
+    const { title, image_url, details, _id } = news;
     return (
         <div>
             <h4 className="text-2xl">
