@@ -17,7 +17,7 @@ const RightSideNav = () => {
                     Login with Github
                 </button>
             </div>
-            <div className="px-4 mb-6">
+            <div className="px-4 mb-10">
                 <h2 className="text-2xl mb-4">Find Us On</h2>
                 <a className="p-4 flex items-center gap-3 border rounded-t-lg" href="">
                     <FaFacebook></FaFacebook><span>Facebook</span>
